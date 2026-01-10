@@ -43,7 +43,7 @@ This platform enables:
 ## 📁 Project Structure  
 
 ```
-DROGNER/
+Altacade/
 ├── backend/
 │   ├── node_modules/
 │   ├── src/
