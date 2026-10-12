@@ -1,7 +1,9 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
-const dotenv = require('dotenv');
+const cors =require('cors');
 const { createServer } = require('http');
 const { Server } = require('socket.io');
 const cookieParser = require('cookie-parser');
@@ -12,11 +14,6 @@ const questionRoutes = require('./routes/question');
 const meetingRoutes = require('./routes/meeting');
 const availabilityRoutes = require('./routes/availability');
 const geminiSession = require('./routes/geminiSession');
-
-
-
-
-dotenv.config();
 
 const app = express();
 const httpServer = createServer(app);

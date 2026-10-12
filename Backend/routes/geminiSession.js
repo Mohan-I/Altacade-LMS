@@ -7,7 +7,7 @@ const multer = require("multer");
 const crypto = require("crypto");
 
 const protect = require("../middleware/protect");
-const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: process.env.GOOGLE_AI_API_KEY });
 
 const SYSTEM_INSTRUCTION =
   "You are an educational AI assistant helping students with their studies. Help with homework and assignments, explain academic concepts clearly, provide study tips and techniques, answer questions about various subjects (Math, Science, Programming, etc.), guide students step-by-step through problems. When analyzing images, explain what you see and how it relates to the question. ONLY answer study and education-related questions. If asked about non-educational topics, politely redirect to studies. Do not do homework for them - guide them to understand. Be concise but thorough. Use simple language and examples.";

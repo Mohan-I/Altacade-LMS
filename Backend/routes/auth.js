@@ -134,17 +134,13 @@ router.post('/student/register', validate(studentRegisterSchema), async (req, re
 
         await newStudent.save();
 
-        // 📌 Send welcome WhatsApp template
-        sendWatiTemplate(
-            phoneNumber,
-            "welcome_wati_v1",
-            buildNamedParams({ name })
-        );
+        // 📌 Send welcome WhatsApp template (uncomment when WATI credentials are configured)
+        // sendWatiTemplateMessage(phoneNumber, name);
 
-        // // 📌 Send WhatsApp welcome template
+        // 📌 Optional: Meta WhatsApp Business API
         // sendWhatsAppMessage(phoneNumber);
-        // sendWatiTemplateMessage(phoneNumber,name);
-        // // 📌 Optional email
+
+        // 📌 Optional email
         // sendWelcomeEmail(email, name, 'student');
 
         // Generate Token
